@@ -30,7 +30,7 @@
 				<img id="logo" src="Assets/images/logo.png" class="col-3">
 
 				<div class="col-4 contact-us" style="height: 3em;">
-					<p>Contact Us</p>
+					<p>Give Us Missed call At <i class="fas fa-phone"></i> 9876565434</p>
 					<br>
 				</div>
 
@@ -59,21 +59,21 @@
 							 aria-haspopup="true" aria-expanded="false">
 							 <i class="fas fa-plane"></i> FlyWidUs</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">
+								<a class="dropdown-item" href="http://www.flywidus.net/indexpage_new.jsp" target="_blank">
 										<i class="fas fa-train"></i> FlyWidUs (Railway)</a>
 							</div>
 
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="contactus.html">
 									<i class="fas fa-phone"></i> Contact Us</a>
 						</li>
 					</ul>
 				</div>
 				<ul class="navbar-nav navbar-right" style="color: #fff">
 						<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="https://www.payunow.com/ellipseindia" target="_blank">
 										<i class="far fa-credit-card"></i>	Pay Now</a>
 							</li>
 				</ul>
@@ -131,14 +131,14 @@
 
 	<div class="block2 container">
 
-		<div class="inner-block2">
-			<div id="block2-ul">
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r1.jpg"> </div>
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r2.jpg"> </div>
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r3.jpg"> </div>
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r4.jpg"> </div>
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r5.jpg"> </div>
-				<div class="block2-ul-item mycard"> <img src="Assets/images/r6.jpg"> </div>
+		<div class="container-marquee inner-block2" >
+			<div class="marquee block2-ul" id="mycrawler2" style="display:flex">
+						<a> <img class="mycard" src="Assets/images/r1.jpg" width="100" height="auto" style="padding:0"> </a>
+						<a> <img  class="mycard" src="Assets/images/r2.jpg" width="100" height="auto" style="padding:0"> </a>
+						<a> <img class="mycard" src="Assets/images/r3.jpg" width="100" height="auto" style="padding:0"> </a>
+						<a> <img class="mycard" src="Assets/images/r4.jpg" width="100" height="auto" style="padding:0"> </a>
+						<a> <img class="mycard" src="Assets/images/r5.jpg" width="100" height="auto" style="padding:0"> </a>
+						<a> <img class="mycard" src="Assets/images/r6.jpg" width="100" height="auto" style="padding:0"> </a>
 			</div>
 		</div>
 
@@ -168,50 +168,25 @@
 
 	<script type="text/javascript" src="Assets/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="Assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="Assets/js/crawler.js"></script>
 
-	<script>
-		var last = document.getElementById('last');
-		var first = document.getElementById('first');
-		var par = document.getElementById('block2-ul');
-
-		function scrollL() {
-			par.animate({
-				scrollRight: par.scrollRight() + 4
-			}, 1000);
-			par.animate({
-				'marginLeft': '-=4px'
-			}, 500);
-			// last.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-			setTimeout(scrollR, 6000);
-		}
-
-		function scrollR() {
-
-			$('html, body').animate({
-				scrollLeft: par.offset().left
-			}, 1000);
-
-			// first.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-			setTimeout(scrollL, 6000);
-		}
-
-		var x = 0;
-		var y = 1;
-
-		function scroll() {
-			x = x + 1;
-			if (x > 2) {
-				y = y * (-1);
-				x = 0;
-			}
-			$('#block2-ul').animate({
-				scrollLeft: $('#block2-ul').scrollLeft() + y * 180
-			});
-
-		}
-		setInterval(scroll, 5000);
-		// scrollL();
-	</script>
+<!-- http://www.dynamicdrive.com/dynamicindex2/crawler/index.htm -->
+	<script type="text/javascript">
+		marqueeInit({
+			uniqueid: 'mycrawler2',
+			style: {
+				'padding': '3px',
+				'width': '100%',
+				'height': '140px'
+			},
+			inc: 1, //speed - pixel increment for each iteration of this marquee's movement
+			mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
+			moveatleast: 2,
+			neutral: 150,
+			savedirection: true,
+			random: true
+		});
+		</script>
 </body>
 
 </html>
