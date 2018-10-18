@@ -3,7 +3,7 @@ a:hover{
   }
   	#logo{
   		margin: 20px;
-      height: 20%;
+      height: 2em;
   	}
 
   	.log-in-travel{
@@ -164,7 +164,9 @@ padding-right: 106px;
 }
 
 
-
+footer{
+	padding: 30px;
+}
   .footer-li{
     margin: 20px;
     display: inline-block;
@@ -194,4 +196,51 @@ padding-right: 106px;
 }
 .navbar-nav li{
 	padding: 10px;
+}
+
+.pre-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 315px;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 10rem;
+	padding: 0;
+	margin: 0 0;
+	font-size: 1rem;
+	color: #fff;
+	text-align: left;
+	list-style: none;
+	background-color: #074a7d;
+	background-clip: padding-box;
+	border: 1px solid rgb(7, 74, 125);
+	border-radius: 0.25rem;
+}
+
+.dropdown-item {
+	padding: 15px;
+	color: #fff;
+}
+.dropdown-menu a{
+	color: #fff;
+}
+
+.dropdown-item:hover {
+	background: #5efffa;
+	border-color:#5efffa; 
+	transition: 0.5s;
+}
+.dropdown-item:hover a{
+	color: #000 !important;	
+}
+
+
+.parent-of-inner-ul:hover .dropdown-menu {
+	display: block;
 }
