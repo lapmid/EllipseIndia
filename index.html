@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ellipse India</title>
+
+	<link rel="stylesheet" href="css/animate.css">
+
+			<link rel="stylesheet" type="text/css" href="Assets/css/bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+			<link rel="stylesheet" type="text/css" href="Assets/css/animate.css">
+            <link rel="stylesheet" type="text/css" href="Assets/css/font-awesome.css">
+
+   
+
+  <style type="text/css">
+	
+</style>          
+
+            
+</head>
+<body>
+
+	<div id="header">
+		<div class="container">
+			<div class="row pre-header">
+				<img id="logo" src="Assets/images/logo.png" class="col-3" >
+				
+
+				<div class="col-2 log-in-movies ">
+					Movies 
+					<br>
+				  <a href=""><button>Log in</button></a>
+				</div>
+				<div class="col-2 log-in-travel">
+					Travel
+					<br>
+					<a href=""><button>Log in</button></a>	
+				</div>
+				
+				<div class="col-2 contact-us">
+					<h4>Contact Us</h4>
+					<br>
+				</div>				
+
+			</div>
+			
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Movies</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Travel</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact Us</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+    
+
+		</div>
+	</div>
+	<br>
+
+	<div class="container" >
+		
+		<div class="row">
+			<div class="col-sm-8">
+					<div id="carouselExampleIndicators" class="carousel slide" data-interval="3000" pause="hover" data-ride="carousel">
+						  <ol class="carousel-indicators">
+						    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						  </ol>
+						  <div class="carousel-inner">
+						    <div class="carousel-item active">
+						       <img class=" w-100" src="Assets/images/corousel1.jpg" alt="Los Angeles" style="width: 30%">
+						    </div>
+						    <div class="carousel-item">
+						       <img class=" w-100" src="Assets/images/corousel2.jpg" alt="Los Angeles" style="width: 30%">
+						    </div>
+						    <div class="carousel-item">
+						       <img class=" w-100" src="Assets/images/corousel3.jpg" alt="Los Angeles" style="width: 30%">
+						    </div>
+						  </div>
+					</div>
+			</div>
+
+			<div class="col-sm-4">
+						<div id="carouselExampleIndicators2" class="carousel  carousel-fade" data-interval="5000" pause="hover" data-ride="carousel">
+							  
+							  <div class="carousel-inner">
+							    <div class="carousel-item active">
+							       <img class=" w-100" src="Assets/images/bottom1.png" alt="Los Angeles">
+							    </div>
+							    <div class="carousel-item">
+							       <img class=" w-100" src="Assets/images/bottom2.png" alt="Los Angeles">
+							    </div>
+							    <div class="carousel-item">
+							       <img class=" w-100" src="Assets/images/bottom3.png" alt="Los Angeles">
+							    </div>
+							  </div>
+						</div>
+			</div>
+
+		</div>	
+		
+	</div>
+
+	<div class="block2 container">
+		
+		<div class="inner-block2" >
+			<div id="block2-ul">
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r1.jpg"> </div>
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r2.jpg"> </div>
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r3.jpg"> </div>
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r4.jpg"> </div>
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r5.jpg"> </div>
+				<div class="block2-ul-item mycard"> <img  src="Assets/images/r6.jpg"> </div>
+			</div>
+		</div>
+			
+
+	</div>
+
+	<footer class="footer container-fluid" style="background-color: #000;height: 100%">
+		
+		
+
+		
+
+		
+			<ul class="" style="list-style-type: disc;">
+				<li class="footer-li"><a href="">Home</a></li>
+				<li class="footer-li"><a href="">Movies</a></li>
+				<li class="footer-li"><a href="">Travel</a></li>
+				<li class="footer-li"><a href="">Contact Us</a></li>
+			</ul>	
+
+			<div class="" style="color: #fff">
+			© 2018 Ellipse India. All Rights Reserved
+		</div>
+		
+	</footer>
+
+
+	<script type="text/javascript" src="Assets/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="Assets/js/bootstrap.js"></script>
+
+<script>
+	var last=document.getElementById('last');
+	var first=document.getElementById('first');
+	var par=document.getElementById('block2-ul');
+	function scrollL(){
+		  par.animate({
+		    scrollRight: par.scrollRight() + 4
+		  }, 1000);
+		   par.animate({
+			    'marginLeft': '-=4px'
+			}, 500);
+    		// last.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+		setTimeout(scrollR, 6000);
+	}
+
+	function scrollR(){
+
+			  $('html, body').animate({
+			    scrollLeft: par.offset().left
+			  }, 1000);
+
+    		// first.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+    		setTimeout(scrollL, 6000);
+	}
+
+	var x=0;
+	var y=1;
+	function scroll(){
+		x=x+1;
+		if(x>2){
+			y = y*(-1);
+			x=0;
+		}
+		$('#block2-ul').animate({
+	        scrollLeft: $('#block2-ul').scrollLeft() + y*180
+	    });
+
+	}
+	setInterval(scroll, 5000);
+	// scrollL();
+	
+</script>
+</body>
+</html>
