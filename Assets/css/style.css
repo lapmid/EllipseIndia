@@ -3,7 +3,7 @@ a:hover{
   }
   	#logo{
   		margin: 20px;
-      height: 20%;
+      height: 2em;
   	}
 
   	.log-in-travel{
@@ -194,4 +194,9 @@ padding-right: 106px;
 }
 .navbar-nav li{
 	padding: 10px;
+}
+
+.pre-header {
+	display: flex;
+	justify-content: space-between;
 }
