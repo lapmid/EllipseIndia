@@ -2,4 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ellipseindia/public_html/
-    - /bin/cp  $DEPLOYPATH
+    - /bin/cp  index.html $DEPLOYPATH
+    - /bin/cp  movies.html $DEPLOYPATH
+    - /bin/cp  contactus.html $DEPLOYPATH
+    - /bin/cp  Assets $DEPLOYPATH
+    - /bin/cp  EllipseIndia $DEPLOYPATH
+    - /bin/cp  README.md $DEPLOYPATH
