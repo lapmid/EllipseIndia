@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ellipseindia/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp Assets/css/style.css $DEPLOYPATH
+    - /bin/cp  $DEPLOYPATH
