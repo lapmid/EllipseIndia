@@ -11,43 +11,46 @@
 	<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="Assets/css/animate.css">
 	<link rel="stylesheet" type="text/css" href="Assets/css/font-awesome.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	 crossorigin="anonymous">
 
-	
+
 	<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 
 	<style type="text/css">
-		iframe{
+		iframe {
 			width: 100%;
 			height: 90%;
 			overflow: hidden;
-			
+
 		}
-		  
-		#myModal{
+
+		#myModal {
 			height: 150%;
 		}
 
-		.modal-body{
+		.modal-body {
 			height: 400px;
-		
+
 		}
-		.modal-content{
+
+		.modal-content {
 			height: 600px;
 		}
+
 		.modal-dialog {
 			max-width: 600px;
 			margin-left: 1.75rem;
 			margin-left: 25%;
 		}
-		
 
-			#join-now-button {
+
+		#join-now-button {
 			position: fixed;
 			top: 110px;
 			right: -4px;
 			cursor: pointer;
-			}
+		}
 	</style>
 
 
@@ -55,10 +58,10 @@
 
 <body>
 
-	
-	<iframe id="hidden-iframe" src="http://ellipseenterprise.com" style="display:none">	
+
+	<iframe id="hidden-iframe" src="http://ellipseenterprise.com" style="display:none">
 		hidden-iframe
-	  </iframe>
+	</iframe>
 
 	<div id="header">
 		<div class="container">
@@ -83,40 +86,40 @@
 					<ul class="navbar-nav">
 						<li class="nav-item active">
 							<a class="nav-link" href="index.html">
-									<i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+								<i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="movies.html">
-									<i class="fas fa-bus"></i> Movies-Travel Voucher</a>
+								<i class="fas fa-bus"></i> Movies-Travel Voucher</a>
 						</li>
 
 						<li class="nav-item  parent-of-inner-ul">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 							 aria-haspopup="true" aria-expanded="false">
-							 <i class="fas fa-plane"></i> FlyWidUs</a>
+								<i class="fas fa-plane"></i> FlyWidUs</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="http://www.flywidus.net/indexpage_new.jsp" target="_blank">
-										<i class="fas fa-train"></i> FlyWidUs (Railway)</a>
+									<i class="fas fa-train"></i> FlyWidUs (Railway)</a>
 							</div>
 
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="contactus.html">
-									<i class="fas fa-phone"></i> Contact Us</a>
+								<i class="fas fa-phone"></i> Contact Us</a>
 						</li>
 						<li id="login_btn" class="nav-item">
 							<!--  -->
 							<a class="nav-link" data-toggle="modal" data-target="#myModal">
-									<i class="fas fa-sign-in-alt"></i> Login </a>
+								<i class="fas fa-sign-in-alt"></i> Login </a>
 						</li>
-						
+
 					</ul>
 				</div>
 				<ul class="navbar-nav navbar-right" style="color: #fff">
-						<li class="nav-item">
-								<a class="nav-link" href="https://www.payunow.com/ellipseindia" target="_blank">
-										<i class="far fa-credit-card"></i>	Pay Now</a>
-							</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.payunow.com/ellipseindia" target="_blank">
+							<i class="far fa-credit-card"></i> Pay Now</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -127,49 +130,48 @@
 
 	<div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
-	  
-		  <!-- Modal content-->
-		  <div class="modal-content">
-			
-			<div class="modal-body">
-				<iframe id="login_iframe" scrolling="no" style="border:none;overflow: hidden;">
-		
-				</iframe>
-			</div>
-			<div class="modal-footer">
-				<small class="left:0">*Please click on Home  or open in chrome if login form not shown</small>
-			  <button style="z-index:1000000" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		  </div>
-	  
-		</div>
-	  </div>
 
-	  
-	    <div id="join-now-button">
-			<img data-toggle="modal" data-target="#myModal2" class="join-now" src="Assets/images/join-now-img.png">
-		</div>
+			<!-- Modal content-->
+			<div class="modal-content">
 
-	  <div id="myModal2" class="modal fade" role="dialog">
-			<div class="modal-dialog">
-		  
-			  <!-- Modal content-->
-			  <div class="modal-content">
-				
 				<div class="modal-body">
-					<iframe scrolling="no" style="border:none;overflow: hidden;" 
-					src="http://ellipseenterprise.com/B2B/join_now.aspx?ID=406575">
-			
+					<iframe id="login_iframe" scrolling="no" style="border:none;overflow: hidden;">
+
 					</iframe>
 				</div>
 				<div class="modal-footer">
-					<small class="left:0">*Please click on Home  or open in chrome if login form not shown</small>
-				  <button style="z-index:1000000" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<small class="left:0">*Please click on Home or open in chrome if login form not shown</small>
+					<button style="z-index:1000000" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
-			  </div>
-		  
 			</div>
-		  </div>
+
+		</div>
+	</div>
+
+
+	<div id="join-now-button">
+		<img data-toggle="modal" data-target="#myModal2" class="join-now" src="Assets/images/join-now-img.png">
+	</div>
+
+	<div id="myModal2" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<iframe scrolling="no" style="border:none;overflow: hidden;" src="http://ellipseenterprise.com/B2B/join_now.aspx?ID=406575">
+
+					</iframe>
+				</div>
+				<div class="modal-footer">
+					<small class="left:0">*Please click on Home or open in chrome if login form not shown</small>
+					<button style="z-index:1000000" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
 
 
 
@@ -221,14 +223,20 @@
 
 	<div class="block2 container">
 
-		<div class="container-marquee inner-block2" >
+		<div class="container-marquee inner-block2">
 			<div class="marquee block2-ul" id="mycrawler2" style="display:flex">
-						<a> <img class="mycard" src="Assets/images/r1.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
-						<a> <img  class="mycard" src="Assets/images/r2.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
-						<a> <img class="mycard" src="Assets/images/r3.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
-						<a> <img class="mycard" src="Assets/images/r4.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
-						<a> <img class="mycard" src="Assets/images/r5.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
-						<a> <img class="mycard" src="Assets/images/r6.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0"> </a>
+				<a> <img class="mycard" src="Assets/images/r1.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard" src="Assets/images/r2.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard" src="Assets/images/r3.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard" src="Assets/images/r4.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard" src="Assets/images/r5.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard" src="Assets/images/r6.jpg" alt="Ellipse India" width="100" height="auto" style="padding:0">
+				</a>
 			</div>
 		</div>
 
@@ -253,151 +261,9 @@
 	<script type="text/javascript" src="Assets/js/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="Assets/js/bootstrap.js"></script>
 	<script type="text/javascript" src="Assets/js/crawler.js"></script>
+	<script type="text/javascript" src="Assets/js/script.js"></script>
 
-	<script>
-			$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-					// if(!is_chrome)
-					// {
-					// 	var url = "http://ellipseenterprise.com/";
-					// 	var win = window.open(url, '_blank');
-					// } else {
-					// 	openNewBackgroundTab("http://ellipseenterprise.com/");
-					// }
-
-			$("#login_btn").click(
-				function(){
-					$("#login_iframe").attr("src", "http://ellipseenterprise.com/B2B/Login.aspx");
-					// if(!is_chrome)
-					// {
-					// 	var url = "http://ellipseenterprise.com/B2B/Login.aspx";
-					// 	var win = window.open(url, '_blank');
-					// } else {
-					// 	openNewBackgroundTab("http://ellipseenterprise.com/B2B/Login.aspx");
-					// }
-				}
-			);
-			// myWindow = window.open("http://ellipseenterprise.com", "_blank", "width=2000, height=1000","modal=no");
-			function openNewBackgroundTab(url){
-				var a = document.createElement("a");
-				a.href = url;
-				var evt = document.createEvent("MouseEvents");
-				//the tenth parameter of initMouseEvent sets ctrl key
-				evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0,
-											true, false, false, false, 0, null);
-				a.dispatchEvent(evt);
-			}
-
-		
-	</script>
-	<script>
-
-			jQuery(document).ready(function() {  
-				$(window).on('load', function(){
-					setTimeout(function(){
-						$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-						
-					},2000);
-				});
-			});
-			
-
-				// var browser = function() {
-				// 	// Return cached result if avalible, else get result then cache it.
-				// 	if (browser.prototype._cachedResult)
-				// 		return browser.prototype._cachedResult;
-
-				// 	// Opera 8.0+
-				// 	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-
-				// 	// Firefox 1.0+
-				// 	var isFirefox = typeof InstallTrigger !== 'undefined';
-
-				// 	// Safari 3.0+ "[object HTMLElementConstructor]" 
-				// 	var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
-
-				// 	// Internet Explorer 6-11
-				// 	var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
-				// 	// Edge 20+
-				// 	var isEdge = !isIE && !!window.StyleMedia;
-
-				// 	// Chrome 1+
-				// 	var isChrome = !!window.chrome && !!window.chrome.webstore;
-
-				// 	// Blink engine detection
-				// 	var isBlink = (isChrome || isOpera) && !!window.CSS;
-
-				// 	return browser.prototype._cachedResult =
-				// 		isOpera ? 'Opera' :
-				// 		isFirefox ? 'Firefox' :
-				// 		isSafari ? 'Safari' :
-				// 		isChrome ? 'Chrome' :
-				// 		isIE ? 'IE' :
-				// 		isEdge ? 'Edge' :
-				// 		isBlink ? 'Blink' :
-				// 		"Don't know";
-				// };
-
-				
-				
-				// var b1=browser();
-				// var v1= localStorage.getItem("ASP.NET_SessionId");
-				// if(v1===null){
-				// 	localStorage.setItem("ASP.NET_SessionId", "0");
-				// 	window.location.href = "index.html";
-				// 	$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-				// 	$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-				// }else{
-				// 	if (b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="0")  { 
-				// 		localStorage.setItem("ASP.NET_SessionId", "1");
-				// 		window.location.href = "index.html";
-				// 	}
-				// 	 if(b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="1"){
-				// 		localStorage.setItem("ASP.NET_SessionId", "2");
-				// 		window.location.href = "index.html";
-				// 	}
-				// }
-
-				
-
-				
-				
-				
-
-
-
-			// 	function getCookie(name) {
-			// 	var dc = document.cookie;
-			// 	var prefix = name + "=";
-			// 	var begin = dc.indexOf("; " + prefix);
-			// 	if (begin == -1) {
-			// 		begin = dc.indexOf(prefix);
-			// 		if (begin != 0) return null;
-			// 	}
-			// 	else
-			// 	{
-			// 		begin += 2;
-			// 		var end = document.cookie.indexOf(";", begin);
-			// 		if (end == -1) {
-			// 		end = dc.length;
-			// 		}
-			// 	}
-			// 	// because unescape has been deprecated, replaced with decodeURI
-			// 	//return unescape(dc.substring(begin + prefix.length, end));
-			// 	return decodeURI(dc.substring(begin + prefix.length, end));
-			// } 
-
-			// function doSomething() {
-			// 	var myCookie = getCookie("ASP.NET_SessionId");
-
-			// 	if (myCookie == null) {
-			// 		location.reload();
-			// 	}
-			// }
-				
-	</script>
-<!-- http://www.dynamicdrive.com/dynamicindex2/crawler/index.htm -->
+	<!-- http://www.dynamicdrive.com/dynamicindex2/crawler/index.htm -->
 	<script type="text/javascript">
 		marqueeInit({
 			uniqueid: 'mycrawler2',
@@ -413,7 +279,7 @@
 			savedirection: true,
 			random: true
 		});
-		</script>
+	</script>
 </body>
 
 </html>
