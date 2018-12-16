@@ -13,7 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="Assets/css/font-awesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-
+	
+	<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 
 	<style type="text/css">
 		iframe{
@@ -53,6 +54,11 @@
 </head>
 
 <body>
+
+	
+	<iframe id="hidden-iframe" src="http://ellipseenterprise.com" style="display:none">	
+		hidden-iframe
+	  </iframe>
 
 	<div id="header">
 		<div class="container">
@@ -98,8 +104,9 @@
 							<a class="nav-link" href="contactus.html">
 									<i class="fas fa-phone"></i> Contact Us</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link"  data-toggle="modal" data-target="#myModal">
+						<li id="login_btn" class="nav-item">
+							<!--  -->
+							<a class="nav-link" data-toggle="modal" data-target="#myModal">
 									<i class="fas fa-sign-in-alt"></i> Login </a>
 						</li>
 						
@@ -125,7 +132,7 @@
 		  <div class="modal-content">
 			
 			<div class="modal-body">
-				<iframe scrolling="no" style="border:none;overflow: hidden;" src="http://ellipseenterprise.com/B2B/Login.aspx">
+				<iframe id="login_iframe" scrolling="no" style="border:none;overflow: hidden;">
 		
 				</iframe>
 			</div>
@@ -165,9 +172,7 @@
 		  </div>
 
 
-	  <iframe id="hidden-iframe" src="http://ellipseenterprise.com" style="display:none">	
-		hidden-iframe
-	  </iframe>
+
 
 	<div class="container">
 
@@ -250,63 +255,109 @@
 	<script type="text/javascript" src="Assets/js/crawler.js"></script>
 
 	<script>
+			$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+					// if(!is_chrome)
+					// {
+					// 	var url = "http://ellipseenterprise.com/";
+					// 	var win = window.open(url, '_blank');
+					// } else {
+					// 	openNewBackgroundTab("http://ellipseenterprise.com/");
+					// }
 
-				var browser = function() {
-					// Return cached result if avalible, else get result then cache it.
-					if (browser.prototype._cachedResult)
-						return browser.prototype._cachedResult;
+			$("#login_btn").click(
+				function(){
+					$("#login_iframe").attr("src", "http://ellipseenterprise.com/B2B/Login.aspx");
+					// if(!is_chrome)
+					// {
+					// 	var url = "http://ellipseenterprise.com/B2B/Login.aspx";
+					// 	var win = window.open(url, '_blank');
+					// } else {
+					// 	openNewBackgroundTab("http://ellipseenterprise.com/B2B/Login.aspx");
+					// }
+				}
+			);
+			// myWindow = window.open("http://ellipseenterprise.com", "_blank", "width=2000, height=1000","modal=no");
+			function openNewBackgroundTab(url){
+				var a = document.createElement("a");
+				a.href = url;
+				var evt = document.createEvent("MouseEvents");
+				//the tenth parameter of initMouseEvent sets ctrl key
+				evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0,
+											true, false, false, false, 0, null);
+				a.dispatchEvent(evt);
+			}
 
-					// Opera 8.0+
-					var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+		
+	</script>
+	<script>
 
-					// Firefox 1.0+
-					var isFirefox = typeof InstallTrigger !== 'undefined';
+			jQuery(document).ready(function() {  
+				$(window).on('load', function(){
+					setTimeout(function(){
+						$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
+						
+					},2000);
+				});
+			});
+			
 
-					// Safari 3.0+ "[object HTMLElementConstructor]" 
-					var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+				// var browser = function() {
+				// 	// Return cached result if avalible, else get result then cache it.
+				// 	if (browser.prototype._cachedResult)
+				// 		return browser.prototype._cachedResult;
 
-					// Internet Explorer 6-11
-					var isIE = /*@cc_on!@*/false || !!document.documentMode;
+				// 	// Opera 8.0+
+				// 	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
-					// Edge 20+
-					var isEdge = !isIE && !!window.StyleMedia;
+				// 	// Firefox 1.0+
+				// 	var isFirefox = typeof InstallTrigger !== 'undefined';
 
-					// Chrome 1+
-					var isChrome = !!window.chrome && !!window.chrome.webstore;
+				// 	// Safari 3.0+ "[object HTMLElementConstructor]" 
+				// 	var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
 
-					// Blink engine detection
-					var isBlink = (isChrome || isOpera) && !!window.CSS;
+				// 	// Internet Explorer 6-11
+				// 	var isIE = /*@cc_on!@*/false || !!document.documentMode;
 
-					return browser.prototype._cachedResult =
-						isOpera ? 'Opera' :
-						isFirefox ? 'Firefox' :
-						isSafari ? 'Safari' :
-						isChrome ? 'Chrome' :
-						isIE ? 'IE' :
-						isEdge ? 'Edge' :
-						isBlink ? 'Blink' :
-						"Don't know";
-				};
+				// 	// Edge 20+
+				// 	var isEdge = !isIE && !!window.StyleMedia;
+
+				// 	// Chrome 1+
+				// 	var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+				// 	// Blink engine detection
+				// 	var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+				// 	return browser.prototype._cachedResult =
+				// 		isOpera ? 'Opera' :
+				// 		isFirefox ? 'Firefox' :
+				// 		isSafari ? 'Safari' :
+				// 		isChrome ? 'Chrome' :
+				// 		isIE ? 'IE' :
+				// 		isEdge ? 'Edge' :
+				// 		isBlink ? 'Blink' :
+				// 		"Don't know";
+				// };
 
 				
-				// debugger;
-				var b1=browser();
-				var v1= localStorage.getItem("ASP.NET_SessionId");
-				if(v1===null){
-					localStorage.setItem("ASP.NET_SessionId", "0");
-					window.location.href = "index.html";
-					$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-					$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
-				}else{
-					if (b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="0")  { 
-						localStorage.setItem("ASP.NET_SessionId", "1");
-						window.location.href = "index.html";
-					}
-					 if(b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="1"){
-						localStorage.setItem("ASP.NET_SessionId", "2");
-						window.location.href = "index.html";
-					}
-				}
+				
+				// var b1=browser();
+				// var v1= localStorage.getItem("ASP.NET_SessionId");
+				// if(v1===null){
+				// 	localStorage.setItem("ASP.NET_SessionId", "0");
+				// 	window.location.href = "index.html";
+				// 	$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
+				// 	$("#hidden-iframe").attr("src", "http://ellipseenterprise.com/");
+				// }else{
+				// 	if (b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="0")  { 
+				// 		localStorage.setItem("ASP.NET_SessionId", "1");
+				// 		window.location.href = "index.html";
+				// 	}
+				// 	 if(b1==="Firefox" && localStorage.getItem("ASP.NET_SessionId")==="1"){
+				// 		localStorage.setItem("ASP.NET_SessionId", "2");
+				// 		window.location.href = "index.html";
+				// 	}
+				// }
 
 				
 
