@@ -18,6 +18,9 @@
 	<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 
 	<style type="text/css">
+	body{
+		background: #e6e7e9;
+	}
 		iframe {
 			width: 100%;
 			height: 90%;
@@ -47,9 +50,83 @@
 
 		#join-now-button {
 			position: fixed;
-			top: 110px;
+			top: 240px;
 			right: -4px;
 			cursor: pointer;
+		}
+
+		.info-header {
+			background: #003366;
+			padding: 10px 10px;
+			color: #fff;
+		}
+
+		.info {
+			border: 1px solid #cccccc;
+		}
+
+		.more {
+			display: none;
+		}
+
+		.overlay {
+
+			position: absolute;
+			height: 1700px;
+			width: 100%;
+			display: none;
+			z-index: 999999;
+			top: 0;
+			bottom: 0;
+			background: rgba(15, 15, 15, 0.801);
+
+		}
+
+		.show-more-content {
+			margin-top: 50px;
+			background: #fff;
+			z-index: 9999999;
+		}
+
+		.closebtn {
+			position: absolute;
+			top: 20px;
+			right: -100px;
+			font-size: 100px;
+			/* position: relative;
+            float: right;
+            left:0px;
+			top: 10px;
+			width: 100px;
+			height: 100px;; */
+		}
+
+		/* .overlay {
+		position: fixed;
+		display: none; 
+		
+		background-color: rgba(0,0,0,0.5);
+		z-index: 200000000;
+		cursor: pointer; 
+		color: #fff;
+		}
+		.overlay-text{
+		position: absolute;
+		font-size: 50px;
+		color: white;
+		transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		}
+		.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+		} */
+
+		.mycard-small {
+			margin: 20px 3px;
+
 		}
 	</style>
 
@@ -64,16 +141,9 @@
 	</iframe>
 
 	<div id="header">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row pre-header">
-				<img id="logo" alt="Ellipse India" src="Assets/images/logo.png" class="col-3">
-
-				<div class="col-4 contact-us" style="height: 3em;">
-					<p>Give Us Missed call At <i class="fas fa-phone"></i> 9876565434</p>
-					<br>
-				</div>
-
-
+				<img id="logo" alt="Ellipse India" src="Assets/images/logo.png" class="col-3">x
 			</div>
 
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -86,14 +156,23 @@
 					<ul class="navbar-nav">
 						<li class="nav-item active">
 							<a class="nav-link" href="index.html">
-								<i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="movies.html">
-								<i class="fas fa-bus"></i> Movies-Travel Voucher</a>
+								HOME <span class="sr-only">(current)</span></a>
 						</li>
 
-						<li class="nav-item  parent-of-inner-ul">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								ABOUT US</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								WHY US</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a class="nav-link" href="movies.html">
+								<i class="fas fa-bus"></i> Movies-Travel Voucher</a>
+						</li> -->
+
+						<!-- <li class="nav-item  parent-of-inner-ul">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 							 aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-plane"></i> FlyWidUs</a>
@@ -102,24 +181,31 @@
 									<i class="fas fa-train"></i> FlyWidUs (Railway)</a>
 							</div>
 
-						</li>
+						</li> -->
 						<li class="nav-item">
 							<a class="nav-link" href="contactus.html">
-								<i class="fas fa-phone"></i> Contact Us</a>
+								CONTACT US</a>
 						</li>
-						<li id="login_btn" class="nav-item">
-							<!--  -->
-							<a class="nav-link" data-toggle="modal" data-target="#myModal">
-								<i class="fas fa-sign-in-alt"></i> Login </a>
+
+						<li class="nav-item">
+								<a class="nav-link" href="shoping.html">
+									SHOPPING</a>
+							</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.payunow.com/ellipseindia" target="_blank">
+								PAY NOW</a>
 						</li>
 
 					</ul>
 				</div>
 				<ul class="navbar-nav navbar-right" style="color: #fff">
-					<li class="nav-item">
-						<a class="nav-link" href="https://www.payunow.com/ellipseindia" target="_blank">
-							<i class="far fa-credit-card"></i> Pay Now</a>
+					<li id="login_btn" class="nav-item">
+						<!--  -->
+						<a class="nav-link" data-toggle="modal" data-target="#myModal">
+							LOGIN </a>
 					</li>
+
 				</ul>
 			</nav>
 
@@ -127,6 +213,7 @@
 		</div>
 	</div>
 	<br>
+
 
 	<div id="myModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -149,7 +236,7 @@
 	</div>
 
 
-	<div id="join-now-button">
+	<div id="join-now-button" style="z-index:10000">
 		<img data-toggle="modal" data-target="#myModal2" class="join-now" src="Assets/images/join-now-img.png">
 	</div>
 
@@ -176,7 +263,7 @@
 
 
 
-	<div class="container">
+	<div class="container-fluid">
 
 		<div class="row">
 			<div class="col-sm-8">
@@ -185,6 +272,9 @@
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -196,6 +286,15 @@
 						<div class="carousel-item">
 							<img class=" w-100" src="Assets/images/corousel3.jpg" alt="Ellipse India" style="width: 30%">
 						</div>
+						<div class="carousel-item">
+								<img class=" w-100" src="Assets/images/corousel3.jpg" alt="Ellipse India" style="width: 30%">
+							</div>
+							<div class="carousel-item">
+								<img class=" w-100" src="Assets/images/corousel5.jpg" alt="Ellipse India" style="width: 30%">
+							</div>
+							<div class="carousel-item">
+								<img class=" w-100" src="Assets/images/corousel6.jpg" alt="Ellipse India" style="width: 30%">
+							</div>
 					</div>
 				</div>
 			</div>
@@ -213,6 +312,15 @@
 						<div class="carousel-item">
 							<img class=" w-100" src="Assets/images/bottom3.png" alt="Ellipse India">
 						</div>
+						<div class="carousel-item ">
+								<img class=" w-100" src="Assets/images/bottom4.png" alt="Ellipse India">
+							</div>
+							<div class="carousel-item">
+								<img class=" w-100" src="Assets/images/bottom5.png" alt="Ellipse India">
+							</div>
+							<div class="carousel-item">
+								<img class=" w-100" src="Assets/images/bottom6.png" alt="Ellipse India">
+							</div>
 					</div>
 				</div>
 			</div>
@@ -221,7 +329,8 @@
 
 	</div>
 
-	<div class="block2 container">
+
+	<div class="block2 container-fluid">
 
 		<div class="container-marquee inner-block2">
 			<div class="marquee block2-ul" id="mycrawler2" style="display:flex">
@@ -243,12 +352,409 @@
 
 	</div>
 
+
+
+
+	
+	<!-- OVERLAY -->
+	<!-- /////////////////////////////////////////////////// -->
+
+
+	<div class="overlay overlay1 container-fluid">
+		<div class="overlay-text row">
+			<div id="content1" class="show-more-content col-md-8 offset-md-2">
+				<a href="javascript:void(0)" class="closebtn" onclick="off()">&times;</a>
+
+				<h2 style="color:#003366">Ellipse Enterprise Pvt. Ltd.
+				</h2>
+				<p>
+					will be the first unique company into Rural Development and changing rural society an entrepreneurs. These
+					entrepreneurs will be the company’s main distribution channels and each of them will be provided with a captured
+					market through the company’s model named “AURUM”
+				</p>
+				<h2 style="color:#003366">Ellipse Enterprise Pvt. Ltd.
+				</h2>
+				<p>
+					Rural United Model) which aspires to create a connect between 20000 Rural and 100 Urban Investors through AVPL.
+				</p>
+				<font size="4" face="georgia"><span id="lblBox1ContentFull" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; display: block; padding: 10px 0px;">
+						<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px 0px 5px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px; color: rgb(52, 51, 51);">YES
+							BANK&nbsp;is one of the banks which started domestic money transfer under its flagship
+							program YES Money. YES Money has developed a unique platform to meet the remittance need of
+							migrants, unbanked and under-banked population in India. This product design brings
+							technology to the end user through the Business Correspondent Agents and simultaneously
+							ensures a technology oblivious experience for the end user. This cash to Bank A/c
+							remittance service is offered across more than fifty thousand outlets pan India.utilizes
+							the Business Correspondent (BC) model to bring the transaction touch-point closer to this
+							set of customers that is available even at non-banking hours. The money, received by the BC
+							agent , is transfer processed by the Bank using National Electronic Fund Transfer (NEFT)
+							and Immediate Payment service (IMPS) technology.</p>
+						<ul style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0px 25px; padding: 0px 0px 10px; font-size: 10px; line-height: 1.6; list-style: none outside none; font-family: inherit; border: medium none; border-radius: 0px; color: rgb(52, 51, 51); background-color: rgb(223, 242, 253);">
+							<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+								<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px;">This
+									is a prepaid rupee denominated reloadable MasterCard Card .</p>
+							</li>
+							<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+								<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px;">Accepted
+									across all YES BANK ATMs in India and any ATM that accepts MasterCard .(Can be used
+									only to perform domestic transactions)</p>
+							</li>
+							<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+								<ul style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0px 25px; padding: 0px 0px 10px; font-size: 10px; line-height: 1.6; list-style: none outside none; font-family: inherit; border: medium none; border-radius: 0px;">
+									<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+										<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px;">Accepted
+											at any Merchant that accepts MasterCard in India</p>
+									</li>
+									<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+										<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px;">No&nbsp;average
+											quarterly balance maintenance is required</p>
+									</li>
+									<li style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 5px 0px; list-style: inherit; border: none; border-radius: 0px; font-size: 1.4rem;">
+										<p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-family: inherit; font-size: 1.4rem; line-height: 1.4; list-style: none outside none; border: medium none; border-radius: 0px;">Daily
+											cash withdrawal at ATM and daily POS transaction limit.</p>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-size: 12.8px;"><br
+							 style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"><img
+							 src="https://ci4.googleusercontent.com/proxy/5FiayXX2q6FVCcE1Ln8wHCNJzuX-QJofRlGxwuscxzsOetJ4erSi5z4sgL57ymRoN6pRvtjvEzhTYJ45W-I91P4mx4t4QMI4_6MzyhpW6CuGhsrtQO-wsQ=s0-d-e1-ft#https://yesmoney.yesbank.co.in/moscarddmt/Image/Common/yesbank.png"
+							 id="m_-7671951596736614733gmail-Img1" alt="yesbank" class="CToWUd" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; border: 0px; max-width: 100%; height: auto; display: inline-block; vertical-align: middle; width: 585px; color: rgb(0, 0, 0); font-size: medium; text-align: -webkit-right; margin-right: 25px;"
+							 width="81" height="33"></div>
+						<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-size: 12.8px;">
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 size="5" color="#000099"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">YES
+										Money Prepaid Card In Association With INC Technology powered by MOS "</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;"><br
+								 style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"></div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">FEATURES:</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										CASH DEPOSITS&nbsp;</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										ANY ATM WITHDRAWAL</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										ONLLINE SHOPPING&nbsp;</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										CARD TO CARD TRANSFER&nbsp;</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										CARD TO ACCOUNT TRANSFER</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										CARD TO OULET WITHDRAWAL&nbsp;</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">*
+										ANY S. MACHINE</b></font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;"><br
+								 style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"></div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 size="5" color="#000099">AEPS (Aadhar&nbsp; Enable Payment Service)</font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;"><b
+								 style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+									<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+									 size="5" color="#006699">1<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+										 size="4">. Cash withdrawal</font>
+									</font>
+								</b></div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 size="5">
+									<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+									 color="#006699">2. fund Transfer</font>
+								</font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 size="5">
+									<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+									 color="#006699">3. Balance check</font>
+								</font>
+							</div>
+							<div style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px; padding: 0px; font-size: 12.8px;">
+								<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+								 size="5" color="#006699"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+										<font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+										 size="4">4. cash deposit .</font>
+									</b></font>
+							</div>
+						</div>
+					</span></font>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="overlay overlay2 container-fluid">
+		<div class="overlay-text row">
+			<div id="content1" class="show-more-content col-md-8 offset-md-2">
+				<a href="javascript:void(0)" class="closebtn" onclick="off()">&times;</a>
+				<div>
+					<h2>Our Vision</h2>
+					<p>
+						We envision a rural population composed mostly of proud and successful entrepreneurs.Ellipse Enterprise wants to
+						become the leading catalysts and business model provider for Rural to become highly motivated as well as
+						effective entrepreneurs. Business Innovation through Social Inclusion.
+
+					</p>
+				</div>
+				<div>
+					<h2>Our Mission</h2>
+					<p>
+						Our mission requires the highest ideals and dedication. Atulya Ventures desires to Convert every rural into a
+						professional and effective entrepreneur. To be an innovator And implementer for increasing growth in new
+						businesses which are uncharted in India. Innovating and putting our best efforts to connect Rural and Urban
+						Services and Products is the theme around which our business growth is defined.
+
+					</p>
+				</div>
+				<div>
+					<h2>Our Goals</h2>
+					<p>
+						Today the Corporate Governance of Government Of India has a steep challenge of Clean Governance with need to
+						bridge the Urban - Rural divide with a sustainable and repeatable model basis of which multiple basic services
+						can be made available to the rural population along with Skills such that the Rural people do not feel the need
+						to relocate to Urban areas and live in inhuman conditions. Our Objective is to eliminate this divide and
+						evangelize an AURUM framework which can be replicated in all states of our country embodying the Indian Culture
+						of in the Rural and Urban Areas too.
+
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="overlay overlay3 container">
+		<div class="overlay-text row">
+			<div id="content1" class="show-more-content col-md-8 offset-md-2">
+				<a href="javascript:void(0)" class="closebtn" onclick="off()">&times;</a>
+				<div style="color:#003366">
+					<h2>Benefits of being a partner</h2>
+					<h4>Join India's fast growing chain of retail network with Ellipse Enterprise Pvt. Ltd.</h4>
+
+					<p style="color:#003366">
+						Start your own Telecom Company without any huge investment or technical knowledge. We have developed the program,
+						its technical side and even tips for your success. All you need to do is find customers those who want to run
+						SMS/Voice Campaign and sell SMS/Voice credits to them. SMS/Voice Credits will be given in wholesale price and you
+						can sell them at your own prices to needy customers. You will get a ready made 100% white labelled website which
+						works with your own domain or subdomain Your customers' control panel and website is 100% customizable so that
+						nobody will come to know that we are working at the backend. No Programming or Technical Skill is required. We
+						have made everything ready and easy for you.
+						<br>
+						You can Start this highly profitable business within 5 minutes
+
+					</p>
+				</div>
+				<div>
+					<h2 style="background:#003366;color: #990000">MARKET STUDY</h2>
+					<p>
+						Mobile and its value added services have brought about a revolutionary change to our life style, making it an
+						inevitable part of us. Mobile subscribers and Service companies are increasing day by day. Recent Surveys reveal
+						that by the end of 2013, India will have more than 120 Crores of mobile subscribers. That means almost 90% of our
+						total population will be using mobile phone. More International Mobile Service providers are also targeting
+						India. So the opportunity & market in Telecom Sector is very wide and unlimited.
+
+					</p>
+				</div>
+				<div>
+					<h2 style="background:#003366;color: #990000">BRANDING</h2>
+					<p>
+						You can customize your control panel & website as your wish. You can upload your own logo, contents and also make
+						changes according to your needs. Full Administration privilege will be yours. All our Services are 100% Dist. All
+						our Services are 100% . Our Company Name or back links will never display on your website.
+						<br><br>
+						Works with your subdomain<br>
+						Upload your Logo & Contents<br>
+						Full Admin Privileges<br>
+						100% Ready Made Distrubtor Control Panel<br>
+						<br><br>
+						Voice Call enables you to communicate with your customers by calling their Mobile/Landphone numbers anywhere in
+						India with a pre-recorded voice message through a fully automated Online System. Voice Calls are completely
+						automated process hence no operators or dialer is need to process the call, once the system is set with your
+						pre-recorded message and contact list through our user friendly online control panel then our system will start
+						calling the recipients and plays your pre-recorded voice message.
+						<br><br>
+						for advertising Support join with digiconnect (digital Marketing Software)Bulk Voice Call Campaign is widely used
+						for Lead generation, Event Notifications, Political Campaign Promotions, Voter Registration, Vote Reminders, Fund
+						Raising, Service Reminders, Product Promotions, Announcements, Give reminders like EMI, Insurance premium, Event
+						Notification , Marketing Products & Services, Meeting alerts, Wake Up Calls, Stock Alerts, Medicine Reminders
+						etc.
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ////////////////////////////////////////////////// -->
+	<div id="info_block" class="container">
+		<div class="row">
+			<div class="col-4">
+				<div class="info-header text-center">
+					OUR APPROACH
+				</div>
+				<div class="info">
+					Ellipse Enterprise Pvt. Ltd.will be the first unique company into Rural Development and changing rural society an
+					entrepreneurs. These entrepreneurs will be the company’s main distribution channels and each of them will be
+					provided with a captured market through the company’s model named “AURUM”
+					<span class="dots">...</span>
+				</div>
+				<button onclick="on1()" class="btn btn-primary more-btn overlay-btn">Read more</button>
+			</div>
+
+			<div class="col-4">
+				<div class="info-header text-center">
+					OUR VISION
+				</div>
+				<div class="info">
+					Our Vision
+
+					We envision a rural population composed mostly of proud and successful entrepreneurs.Ellipse Enterprise wants to
+					become the leading catalysts and business model provider for Rural to become highly motivated as well as effective entrepreneurs. Business Innovation through Social Inclusion. 
+					<span class="dots">...</span>
+				</div>
+				<button onclick="on2()" class="btn btn-primary more-btn overlay-btn">Read more</button>
+			</div>
+
+			<div class="col-4">
+				<div class="info-header text-center">
+					BECOME A CHANNEL PARTNER NOW
+				</div>
+				<div class="info">
+					Start your own Telecom Company without any huge investment or technical knowledge. We have developed the program,
+					its technical side and even tips for your success. All you need to do is find customers those who want to run
+					SMS/Voice Campaign and sell SMS/Voice credits to them. SMS/Voice Credits will be
+					<span class="dots">...</span>
+				</div>
+				<a href="#content1"><button  onclick="on3()" class=" btn btn-primary more-btn overlay-btn">Read more</button></a>
+				
+			</div>
+		</div>
+
+	</div>
+	<br><br>
+
+
+
+	<div class="block3 container-fluid">
+
+		<div class="container-marquee inner-block2">
+			<img class="powered-by" src="Assets/images/slider-images/powered-by.jpg" style="float:left;margin-top:46px">
+			<div class="marquee block2-ul" id="mycrawler1" style="display:flex">
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/1.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/2.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/3.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/4.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/5.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/6.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/7.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/8.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/9.jpg" alt="Ellipse India" width="100" height="auto"
+					 style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/10.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/11.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/12.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/13.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/14.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/15.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/16.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/17.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/18.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/19.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/20.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/21.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/22.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/23.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/24.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+				<a> <img class="mycard mycard-small" src="Assets/images/slider-images/25.jpg" alt="Ellipse India" width="100"
+					 height="auto" style="padding:0">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<img src="Assets/images/Bottom-img.jpg" width="100%">
+	</div>
+
 	<footer class="footer container-fluid" style="background-color: #000;height: 100%">
 		<ul class="" style="list-style-type: disc;">
-			<li class="footer-li"><a href="">Home</a></li>
-			<li class="footer-li"><a href="">Movies</a></li>
-			<li class="footer-li"><a href="">Travel</a></li>
-			<li class="footer-li"><a href="">Contact Us</a></li>
+				<li class="footer-li"><a href="index.html">Home</a></li>
+				<li class="footer-li"><a href="">About Us </a></li>
+				<li class="footer-li"><a href="">Why Us</a></li>
+				<li class="footer-li"><a href="shoping.html">Shoping</a></li>
+				<li class="footer-li"><a href="contactus.html">Contact Us</a></li>
 		</ul>
 
 		<div class="" style="color: #fff">
@@ -263,6 +769,46 @@
 	<script type="text/javascript" src="Assets/js/crawler.js"></script>
 	<script type="text/javascript" src="Assets/js/script.js"></script>
 
+	<script>
+		function on1() {
+			document.querySelector(".overlay1").style.display = "block";
+			
+			$('.closebtn').scrollTop(0);
+			
+		}
+
+		function off() {
+			document.querySelector(".overlay1").style.display = "none";
+			document.querySelector(".overlay2").style.display = "none";
+			document.querySelector(".overlay3").style.display = "none";
+		}
+
+		function on2() {
+			document.querySelector(".overlay2").style.display = "block";
+		}
+
+
+		function on3() {
+			document.querySelector(".overlay3").style.display = "block";
+		}
+
+
+		function ReadMoreFunc() {
+			var dots = document.querySelector(".dots");
+			var moreText = document.querySelector(".more");
+			var btnText = document.querySelector(".more-btn");
+
+			if (dots.style.display === "none") {
+				dots.style.display = "inline";
+				btnText.innerHTML = "Read more";
+				moreText.style.display = "none";
+			} else {
+				dots.style.display = "none";
+				btnText.innerHTML = "Read less";
+				moreText.style.display = "inline";
+			}
+		}
+	</script>
 	<!-- http://www.dynamicdrive.com/dynamicindex2/crawler/index.htm -->
 	<script type="text/javascript">
 		marqueeInit({
@@ -273,6 +819,21 @@
 				'height': '140px'
 			},
 			inc: 1, //speed - pixel increment for each iteration of this marquee's movement
+			mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
+			moveatleast: 2,
+			neutral: 150,
+			savedirection: true,
+			random: true
+		});
+
+		marqueeInit({
+			uniqueid: 'mycrawler1',
+			style: {
+				'padding': '1px',
+				'width': '100%',
+				'height': '140px'
+			},
+			inc: 2, //speed - pixel increment for each iteration of this marquee's movement
 			mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
 			moveatleast: 2,
 			neutral: 150,

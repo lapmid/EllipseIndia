@@ -1,151 +1,194 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>
 
-</title><link rel="stylesheet" href="css/style.css" /></head>
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="Assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/font-awesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz">
+    <style>
+        .overlay {
+            position: absolute;
+            background: #fff;
+            display: none;
+            background: #000;
+
+        }
+
+        .show-more-content {
+            background: #fff;
+        }
+
+        .closebtn {
+            position: relative;
+            float: right;
+            left: 0px;
+            top: 10px;
+        }
+    </style>
+</head>
+
 <body>
-    <form name="form1" method="post" action="./Login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
-<div>
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzA2NjYwNDk5DxYCHgVLY29kZQUGNDA2NTc1ZGRXkzVpAA6pyBKm92EO7FrNNOJyV0WH9KpK8XnV+MNktg==" />
-</div>
 
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['form1'];
-if (!theForm) {
-    theForm = document.form1;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
+    <div class="overlay container">
+        <div class="overlay-text row">
+            <div id="content1" class="show-more-content col-md-8 offset-md-2">
+                <a href="javascript:void(0)" class="closebtn" onclick="off()">&times;</a>
+               
+                        <div id="cboxWrapper" style="height: 533px; width: 652px;">
+                            <div>
+                                <div id="cboxTopLeft" style="float: left;"></div>
+                                <div id="cboxTopCenter" style="float: left; width: 610px;"></div>
+                                <div id="cboxTopRight" style="float: left;"></div>
+                            </div>
+                            <div style="clear: left;">
+                                <div id="cboxMiddleLeft" style="float: left; height: 491px;"></div>
+                                <div id="cboxContent" style="float: left; width: 610px; height: 491px;">
+                                    <div id="cboxLoadedContent" style="display: block; width: 610px; overflow: auto; height: 463px;">
+                                        <div id="content2">
+                                            <span id="lblBox2ContentFull">
+                                                <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                    face="georgia">
+                                                    <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 1.25rem; padding: 0px; font-family: inherit; font-size: 1rem; line-height: 1.6; display: inline !important;"><b
+                                                            style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+                                                            <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                                size="5"><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: 18.4px;">
+                                                                    <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                                        color="#000099">Our Vision</font>
+                                                                </span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: 18.4px;">
+                                                                    <o:p style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"></o:p>
+                                                                </span></font>
+                                                        </b></p>
+                                                </font>
+                                                <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0.0001pt; padding: 0px; font-family: Lato, sans-serif; font-size: 13px; line-height: 1.6;">
+                                                    <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                        face="georgia"><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;"
+                                                            lang="EN">We envision a rural population composed mostly of proud and
+                                                            successful entrepreneurs.<b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+                                                                <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                                    color="#003399">Ellipse Enterprise</font>
+                                                            </b></span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;"><b
+                                                                style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+                                                                <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                                    color="#003399">&nbsp;</font>
+                                                            </b>wants to become the leading catalysts and business model provider for
+                                                            Rural to become highly motivated as well as effective entrepreneurs.&nbsp;</span><span
+                                                            style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">Business
+                                                            Innovation through Social Inclusion.</span></font>
+                                                </p>
+                                                <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0.0001pt; padding: 0px; font-family: Lato, sans-serif; line-height: 1.6;"><span
+                                                        style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: 18.4px;"><b
+                                                            style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">
+                                                            <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                                size="5" face="georgia" color="#000099">Our Mission</font>
+                                                        </b></span></p>
+                                                <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0.0001pt; padding: 0px; font-family: Lato, sans-serif; font-size: 13px; line-height: 1.6;">
+                                                    <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                        face="georgia"><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;"
+                                                            lang="EN">Our mission requires the highest ideals and dedication. Atulya
+                                                            Ventures desires to&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">Convert
+                                                            every rural into a professional and effective entrepreneur. To be an
+                                                            innovator&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">And
+                                                            implementer for increasing growth in new businesses which are uncharted in
+                                                            India.&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">Innovating
+                                                            and putting our best efforts to connect Rural and Urban Services and
+                                                            Products&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">is
+                                                            the theme around which our business growth is defined.</span></font>
+                                                </p>
+                                                <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 1.25rem; padding: 0px; font-family: Lato, sans-serif; line-height: 1.6;"><span
+                                                        style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: 18.4px;">
+                                                        <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                            size="5" face="georgia" color="#003399"><b style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; line-height: inherit;">Our
+                                                                Goals</b></font>
+                                                    </span></p>
+                                                <p class="MsoNormal" style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; margin: 0px 0px 0.0001pt; padding: 0px; font-family: Lato, sans-serif; font-size: 13px; line-height: 1.6;">
+                                                    <font style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box;"
+                                                        face="georgia"><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;"
+                                                            lang="EN">Today the Corporate Governance of Government Of India has a steep
+                                                            challenge of Clean&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">Governance
+                                                            with need to bridge the Urban - Rural divide with a sustainable and
+                                                            repeatable model basis of which multiple basic services can be made
+                                                            available to the rural population along with Skills such that the Rural
+                                                            people do not feel the need to relocate to Urban areas and live in&nbsp;</span><span
+                                                            style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">inhuman
+                                                            conditions. Our Objective is to eliminate this divide and evangelize an
+                                                            AURUM&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">framework
+                                                            which can be replicated in all states of our country embodying the Indian
+                                                            Culture of&nbsp;</span><span style="-webkit-font-smoothing: antialiased; text-shadow: none; text-rendering: optimizelegibility; box-sizing: border-box; font-size: 10pt;">in
+                                                            the Rural and Urban Areas too.&nbsp;</span></font>
+                                                </p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div id="cboxLoadingOverlay" style="float: left; display: none;"></div>
+                                    <div id="cboxLoadingGraphic" style="float: left; display: none;"></div>
+                                    <div id="cboxTitle" style="float: left; display: block;"></div>
+                                    <div id="cboxCurrent" style="float: left; display: none;"></div>
+                                    <div id="cboxNext" style="float: left; display: none;"></div>
+                                    <div id="cboxPrevious" style="float: left; display: none;"></div>
+                                    <div id="cboxSlideshow" style="float: left; display: none;"></div>
+                                    <div id="cboxClose" style="float: left;">close</div>
+                                </div>
+                                <div id="cboxMiddleRight" style="float: left; height: 491px;"></div>
+                            </div>
+                            <div style="clear: left;">
+                                <div id="cboxBottomLeft" style="float: left;"></div>
+                                <div id="cboxBottomCenter" style="float: left; width: 610px;"></div>
+                                <div id="cboxBottomRight" style="float: left;"></div>
+                            </div>
+                       
+                        
+                    </div>
+            </div>
+        </div>
 
-
-<script src="/WebResource.axd?d=_m7dpcH7VRbxzjLOPV1wq2aK-73z5fxQGo6henAwTlHhG1KV9yx9w4Bl085hh97A6tI_-yDD7_9pIYjUKBb2EgUH3VbRVlZzTSVQepAISFo1&amp;t=636681801604795562" type="text/javascript"></script>
-
-
-<script src="/WebResource.axd?d=jxDZlJfgqTVWsyhzkBBtuH4rBtiYEQDX0Npf6pp7P-1akXFROqqdU1IxnWCRJwXxlOnnizNv6kKZa2iU0_vtPx43DyRi0bRyfaNRihK-iPI1&amp;t=636681801604795562" type="text/javascript"></script>
-<script type="text/javascript">
-//<![CDATA[
-function WebForm_OnSubmit() {
-if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
-return true;
-}
-//]]>
-</script>
-
-<div>
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="711A2596" />
-</div>
-    <div>
-        <input type="hidden" name="hdnKcode" id="hdnKcode" />
-        <h1 style="color: #4d4d4d;">
-            Login to B2B Panel</h1>
-        <table cellpadding="5" cellspacing="5" width="600px" align="center" style="border: 1px solid #CCC;">
-            <tr>
-                <td align="center" colspan="2">
-                    <span id="lblmsg" style="color:Red;"></span>
-                </td>
-            </tr>
-            <tr id="trotpemail">
-	<td align="right">
-                    Email :
-                </td>
-	<td>
-                    <input name="txtEmail" type="text" id="txtEmail" />
-                    <span id="rv1" style="color:Red;visibility:hidden;">* Required</span>
-                </td>
-</tr>
-
-            <tr id="trotppass">
-	<td align="right">
-                    Password :
-                </td>
-	<td>
-                    <input name="txtPassword" type="password" id="txtPassword" />
-                    <span id="rv2" style="color:Red;visibility:hidden;">* Required</span>
-                </td>
-</tr>
-
-            <tr id="trotpkcode">
-	<td align="right">
-                    Kcode :
-                </td>
-	<td>
-                    <input name="txtKcode" type="text" id="txtKcode" />
-                    <span id="rv3" style="color:Red;visibility:hidden;">* Required</span>
-                </td>
-</tr>
-
-            <tr id="trotpbtn">
-	<td>
-                </td>
-	<td>
-                    <input type="submit" name="btn" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btn&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btn" class="submt" /><span
-                        style="text-align: right; margin-left: 20px; vertical-align: bottom;">
-                        <a id="lnk" href="javascript:__doPostBack(&#39;lnk&#39;,&#39;&#39;)">Forgot password?</a></span>
-                </td>
-</tr>
-
-            
-        </table>
     </div>
-    
-<script type="text/javascript">
-//<![CDATA[
-var Page_Validators =  new Array(document.getElementById("rv1"), document.getElementById("rv2"), document.getElementById("rv3"));
-//]]>
-</script>
-
-<script type="text/javascript">
-//<![CDATA[
-var rv1 = document.all ? document.all["rv1"] : document.getElementById("rv1");
-rv1.controltovalidate = "txtEmail";
-rv1.errormessage = "* Required";
-rv1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-rv1.initialvalue = "";
-var rv2 = document.all ? document.all["rv2"] : document.getElementById("rv2");
-rv2.controltovalidate = "txtPassword";
-rv2.errormessage = "* Required";
-rv2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-rv2.initialvalue = "";
-var rv3 = document.all ? document.all["rv3"] : document.getElementById("rv3");
-rv3.controltovalidate = "txtKcode";
-rv3.errormessage = "* Required";
-rv3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
-rv3.initialvalue = "";
-//]]>
-</script>
 
 
-<script type="text/javascript">
-//<![CDATA[
 
-var Page_ValidationActive = false;
-if (typeof(ValidatorOnLoad) == "function") {
-    ValidatorOnLoad();
-}
 
-function ValidatorOnSubmit() {
-    if (Page_ValidationActive) {
-        return ValidatorCommonOnSubmit();
-    }
-    else {
-        return true;
-    }
-}
-        //]]>
-</script>
-</form>
+
+
+   
+    <div>
+        <button class="btn" onclick="on()">
+            Show
+        </button>
+    </div>
+
+
+    <script>
+        function on() {
+            document.querySelector(".overlay").style.display = "block";
+        }
+
+        function off() {
+            document.querySelector(".overlay").style.display = "none";
+        }
+
+        function ReadMoreFunc() {
+            var dots = document.querySelector(".dots");
+            var moreText = document.querySelector(".more");
+            var btnText = document.querySelector(".more-btn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+
+
 </body>
+
 </html>
