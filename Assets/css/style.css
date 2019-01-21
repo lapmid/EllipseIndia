@@ -3,10 +3,8 @@ a:hover{
 }
 	#logo{
 		margin: 0.5em;
-	  
 		width: auto;
 		vertical-align: middle;
-	
 	}
 
 	.log-in-travel{
@@ -346,3 +344,5 @@ iframe{
 		left: 0;
 		width: 100%;
 	}
+
+	
