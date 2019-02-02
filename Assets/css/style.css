@@ -216,7 +216,8 @@ footer{
   justify-content: space-between;
 }
 .pre-header img{
-	height: 120px;
+	height: 10vw;
+	margin-top: 25px;
 }
 
 .dropdown-menu {
