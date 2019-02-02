@@ -211,9 +211,12 @@ footer{
 }
 
 .pre-header {
-	margin: 20px 5px;
+	margin: 5px 0px;
   display: flex;
   justify-content: space-between;
+}
+.pre-header img{
+	height: 120px;
 }
 
 .dropdown-menu {
